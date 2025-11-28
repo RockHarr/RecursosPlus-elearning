@@ -154,162 +154,38 @@ img {
 /* 
   Footer
   ------
-/*
-  styles.css
-  ----------
-  Hoja de estilos principal del proyecto.
-  
-  Aunque usamos Bootstrap 5 para la estructura (grillas, tarjetas, botones),
-  aquí escribimos nuestro propio CSS para:
-  1. Personalizar colores y fuentes (variables).
-  2. Ajustar detalles que Bootstrap no cubre.
-  3. Aprender cómo funciona CSS "por debajo".
 */
+footer {
+  border-top: 1px solid #dee2e6;
+}
 
-/* 
-  :root
-  -----
-  Aquí definimos "Variables CSS" (Custom Properties).
-  Es una buena práctica para mantener los colores consistentes en todo el sitio.
-  Si queremos cambiar el color principal, solo lo cambiamos aquí.
-*/
-:root {
-  /* Colores del tema oscuro/espacial */
-  --bg-color: #020617;
-  /* Fondo muy oscuro (casi negro) */
-  --surface-color: #0f172a;
-  /* Fondo de tarjetas/secciones */
-  --text-main: #e5e7eb;
-  /* Texto claro para fondo oscuro */
-  --text-muted: #94a3b8;
-  /* Texto secundario */
-  --accent-color: #38bdf8;
-  /* Azul brillante para destaques */
-  --brand-primary: #0d6efd;
-  /* Azul Bootstrap por defecto */
+/* Logo en el header */
+.header-logo {
+  max-height: 410px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .header-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* 
-  Reset básico
-  ------------
-  Bootstrap ya hace un "reboot" (reset), pero aquí aseguramos
-  que el modelo de caja sea siempre 'border-box'.
+  ========================================
+  MEJORAS VISUALES Y DE LEGIBILIDAD (NUEVO)
+  ========================================
+  A continuación, aplicamos estilos específicos para cada sección
+  para romper la monotonía visual (el "efecto plano") y mejorar la lectura.
 */
-* {
-  box-sizing: border-box;
-}
 
 /* 
-  Estilos del Body
-  ----------------
-  Sobrescribimos algunos estilos de Bootstrap para darle nuestro toque.
-*/
-body {
-  /* 
-     Usamos 'Titillium Web' para el cuerpo del texto.
-     Es una fuente moderna y muy legible en pantallas.
-  */
-  font-family: 'Titillium Web', system-ui, -apple-system, sans-serif;
-  /* 
-     Si quisieras un tema oscuro global, podrías descomentar esto:
-     background-color: var(--bg-color);
-     color: var(--text-main);
-  */
-}
-
-/* 
-  Encabezados
-  -----------
-  Usamos 'Lexend Deca' para títulos.
-  Tiene mucha personalidad y se ve bien en tamaños grandes.
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.display-5,
-.lead {
-  font-family: 'Lexend Deca', sans-serif;
-}
-
-/* 
-  Secciones
-  ---------
-  Damos un poco de aire (padding) y bordes redondeados a las secciones
-  si queremos que se distingan del fondo.
-*/
-section {
-  /* position: relative; para poder posicionar elementos hijos si fuera necesario */
-  position: relative;
-}
-
-/* 
-  Imágenes
-  --------
-  Aseguramos que las imágenes sean responsivas y tengan bordes suaves.
-*/
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  /* Bordes redondeados */
-}
-
-/* 
-  Personalización de Tarjetas (Cards)
-  -----------------------------------
-  Extendemos la clase .card de Bootstrap.
-*/
-.card {
-  border: none;
-  /* Quitamos el borde por defecto */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Efecto Hover: cuando pasas el mouse por encima */
-.card:hover {
-  transform: translateY(-5px);
-  /* Se mueve un poco hacia arriba */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  /* Sombra más pronunciada */
-}
-
-/* 
-  Navegación
-  ----------
-  Pequeños ajustes a los enlaces del nav.
-*/
-.nav-link {
-  color: var(--brand-primary);
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
-/* 
-  Testimonios
-  -----------
-  Estilos específicos para la sección de testimonios.
-*/
-.testimonios-grid .card {
-  background-color: #f8f9fa;
-  /* Fondo gris muy suave */
-}
-
-.testimonios-grid img {
-  border: 3px solid #fff;
-  /* Borde blanco alrededor del avatar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* 
-  Footer
-  ------
+  1. Ajustes de Tipografía para Desktop 
+  -------------------------------------
+  Usamos una "Media Query" para detectar pantallas grandes (min-width: 992px).
   Esto nos permite aumentar el tamaño de letra solo en computadores,
   donde la pantalla está más lejos de los ojos que un celular.
 */
