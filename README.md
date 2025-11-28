@@ -1,6 +1,6 @@
-# RecursosPlus-elearning
 
-# Estudio Frontend 7D – Trabajo colaborativo
+
+# RecursosPlus-elearning – Trabajo colaborativo
 
 Este repositorio corresponde a un **trabajo colaborativo** del curso de Frontend.  
 La tarea consiste en implementar una página web en grupos, que incluya las secciones:
@@ -29,10 +29,12 @@ y dejar el proyecto respaldado en GitHub.
 ## Estructura del proyecto
 
 ```txt
-equipo-frontend-7d/
+RecursosPlus-elearning/
 ├── index.html
 └── ASSETS/
     ├── CSS/
     │   └── styles.css
+    ├── JS/
+    │   └── script.js
     └── IMG/
         └── equipo.jpg (opcional)
