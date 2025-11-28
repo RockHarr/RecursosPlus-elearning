@@ -316,18 +316,6 @@ footer {
 }
 
 /* Logo en el header */
-.header-logo {
-  max-height: 410px;
-  /* max-width: 400px; por si acaso, para que no se pase */
-  width: auto;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-/* 
-  ========================================
-  MEJORAS VISUALES Y DE LEGIBILIDAD (NUEVO)
-  ========================================
   A continuación, aplicamos estilos específicos para cada sección
   para romper la monotonía visual (el "efecto plano") y mejorar la lectura.
 */
