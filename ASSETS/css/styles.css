@@ -49,12 +49,33 @@
   Sobrescribimos algunos estilos de Bootstrap para darle nuestro toque.
 */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* 
+     Usamos 'Titillium Web' para el cuerpo del texto.
+     Es una fuente moderna y muy legible en pantallas.
+  */
+  font-family: 'Titillium Web', system-ui, -apple-system, sans-serif;
   /* 
      Si quisieras un tema oscuro global, podrías descomentar esto:
      background-color: var(--bg-color);
      color: var(--text-main);
   */
+}
+
+/* 
+  Encabezados
+  -----------
+  Usamos 'Lexend Deca' para títulos.
+  Tiene mucha personalidad y se ve bien en tamaños grandes.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-5,
+.lead {
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 /* 
