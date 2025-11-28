@@ -33,7 +33,7 @@ if (formContacto && feedback) {
         // Dejamos rastro en consola (práctica de console.log)
         console.log("Formulario enviado:", { nombre, correo, area, curso, mensaje, acepto });
 
-        // 2. Validaciones simples (además de los required en el HTML)
+        // 2. Validaciones simples (además de los requeridos en el HTML)
 
         // Validar campos obligatorios
         if (!nombre || !correo || !area || !curso || !acepto) {
