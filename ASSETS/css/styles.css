@@ -310,20 +310,6 @@ img {
 /* 
   Footer
   ------
-*/
-footer {
-  border-top: 1px solid #dee2e6;
-}
-
-/* Logo en el header */
-  A continuación, aplicamos estilos específicos para cada sección
-  para romper la monotonía visual (el "efecto plano") y mejorar la lectura.
-*/
-
-/* 
-  1. Ajustes de Tipografía para Desktop 
-  -------------------------------------
-  Usamos una "Media Query" para detectar pantallas grandes (min-width: 992px).
   Esto nos permite aumentar el tamaño de letra solo en computadores,
   donde la pantalla está más lejos de los ojos que un celular.
 */
