@@ -4,210 +4,415 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudio Frontend 7D</title>
+  <title>RecursosPlus e-learning · Estudio Frontend 7D</title>
+
+  <!-- 
+    CSS de Bootstrap 5 (CDN)
+    Primero cargamos Bootstrap para tener su sistema de grillas y componentes.
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- 
+    Design system RCSpark (tu librería propia basada en Bootstrap / Material 3)
+    Ajusta la ruta si usas otra URL para GitHub Pages.
+  -->
+  <link rel="stylesheet" href="https://rockharr.github.io/rcspark-material-design-system/css/rcspark.css">
+
+  <!-- 
+    Hoja de estilos propia del proyecto
+    Importante: la carpeta debe llamarse exactamente "css" en minúsculas 
+    para que funcione en GitHub Pages.
+  -->
   <link rel="stylesheet" href="ASSETS/css/styles.css">
 </head>
 
-<body>
+<body class="bg-body-tertiary">
+
   <!-- 
     Trabajo colaborativo – Lección X
-    Proyecto: Estudio Frontend 7D
+    Proyecto: Estudio Frontend 7D / RecursosPlus e-learning
     
     Esta página fue creada en equipo para practicar:
     - estructura básica HTML
-    - secciones: quiénes somos, misión, visión, servicios
+    - secciones: quiénes somos, misión, visión, cursos, testimonios
+    - uso de Bootstrap 5 + design system propio
     - trabajo con GitHub en grupo
   -->
 
-  <!-- HEADER -->
-  <header>
-    <h1>RecursosPlus+ - E-Learning</h1>
-    <p>Somos un equipo de estudiantes de Frontend que creó esta web como
-      trabajo colaborativo. Imaginamos RecursosPlus como una pequeña
-      plataforma de recursos digitales para aprender paso a paso, igual
-      que nosotros.</p>
+  <!-- HEADER / HERO -->
+  <header class="py-4 border-bottom bg-white">
+    <div class="container d-flex flex-column flex-lg-row align-items-center gap-4">
+      <!-- Ilustración principal (hero) -->
+      <div class="flex-shrink-0">
+        <img src="ASSETS/IMG/hero-recursosplus.jpg"
+          alt="Ilustración de un equipo diverso usando una plataforma e-learning en una pantalla grande"
+          class="img-fluid rounded">
+      </div>
 
-    <nav>
-      <a href="#quienes-somos">Quiénes somos</a>
-      <a href="#mision">Misión</a>
-      <a href="#vision">Visión</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#testimonios">Testimonios</a>
-    </nav>
+      <!-- Título + descripción + navegación -->
+      <div class="flex-grow-1">
+        <h1 class="display-5 fw-bold mb-3">RecursosPlus e-learning</h1>
+        <p class="lead">
+          Somos un equipo de estudiantes de Frontend que creó esta web como
+          trabajo colaborativo. Imaginamos RecursosPlus como una pequeña
+          plataforma de recursos digitales para aprender paso a paso, igual
+          que nosotros.
+        </p>
+
+        <!-- Navegación interna de la página -->
+        <nav class="mt-3">
+          <ul class="nav flex-wrap gap-2">
+            <li class="nav-item"><a class="nav-link px-2" href="#quienes-somos">Quiénes somos</a></li>
+            <li class="nav-item"><a class="nav-link px-2" href="#mision">Misión</a></li>
+            <li class="nav-item"><a class="nav-link px-2" href="#vision">Visión</a></li>
+            <li class="nav-item"><a class="nav-link px-2" href="#cursos">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link px-2" href="#testimonios">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link px-2" href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main>
-    <section id="quienes-somos">
-      <h2>Quiénes somos</h2>
-      <p>
-        RecursosPlus e-learning nace como un trabajo colaborativo de estudiantes
-        del curso de Frontend, con una idea clara: imaginar una plataforma simple
-        donde el área de Recursos Humanos pueda aprender, paso a paso, sobre
-        tecnología y cumplimiento laboral.
-      </p>
-      <p>
-        Detrás de esta página hay un equipo de cuatro personas con perfiles y
-        experiencias distintas, pero con algo en común: queremos traducir temas
-        técnicos y legales a un lenguaje más cercano, para que sean realmente
-        útiles en el día a día de las organizaciones.
-      </p>
+  <main class="container my-5">
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <img src="ASSETS/IMG/quienes-somos-equipo.jpg"
+            alt="Ilustración de un equipo reunido alrededor de una mesa planificando un curso online"
+            class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-lg-7">
+          <h2 class="h3 mb-3">Quiénes somos</h2>
+          <p>
+            RecursosPlus e-learning nace como un trabajo colaborativo de estudiantes
+            del curso de Frontend, con una idea clara: imaginar una plataforma simple
+            donde el área de Recursos Humanos pueda aprender, paso a paso, sobre
+            tecnología y cumplimiento laboral.
+          </p>
+          <p>
+            Detrás de esta página hay un equipo de cuatro personas con perfiles y
+            experiencias distintas, pero con algo en común: queremos traducir temas
+            técnicos y legales a un lenguaje más cercano, para que sean realmente
+            útiles en el día a día de las organizaciones.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="mision">
-      <h2>Misión</h2>
-      <p>
-        Nuestra misión es entregar formación accesible para equipos de Recursos
-        Humanos, combinando fundamentos de desarrollo web con contenidos sobre
-        leyes laborales clave. Queremos que RR.HH. pueda comunicarse mejor con
-        las áreas técnicas, comprender el impacto de la tecnología y, al mismo
-        tiempo, estar al día con la normativa vigente.
-      </p>
-      <p>
-        Buscamos que cada curso se pueda aplicar en la práctica: desde entender
-        conceptos básicos de front-end hasta implementar buenas prácticas de
-        convivencia laboral y jornadas de trabajo.
-      </p>
+    <!-- MISIÓN -->
+    <section id="mision" class="mb-5">
+      <div class="row align-items-center g-4 flex-lg-row-reverse">
+        <div class="col-lg-5">
+          <img src="ASSETS/IMG/mision-recursosplus.jpg"
+            alt="Ilustración de una persona de Recursos Humanos aprendiendo sobre tecnología y leyes en su computador"
+            class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-lg-7">
+          <h2 class="h3 mb-3">Misión</h2>
+          <p>
+            Nuestra misión es entregar formación accesible para equipos de Recursos
+            Humanos, combinando fundamentos de desarrollo web con contenidos sobre
+            leyes laborales clave. Queremos que RR.HH. pueda comunicarse mejor con
+            las áreas técnicas, comprender el impacto de la tecnología y, al mismo
+            tiempo, estar al día con la normativa vigente.
+          </p>
+          <p>
+            Buscamos que cada curso se pueda aplicar en la práctica: desde entender
+            conceptos básicos de front-end hasta implementar buenas prácticas de
+            convivencia laboral y jornadas de trabajo.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="vision">
-      <h2>Visión</h2>
-      <p>
-        Nos imaginamos a RecursosPlus e-learning como un puente entre las personas
-        y la tecnología dentro de las empresas. Queremos que, en el futuro, los
-        equipos de RR.HH. no solo gestionen procesos, sino que también puedan
-        participar en conversaciones sobre intranets, sitios web, cultura digital
-        y cambios legales con mayor seguridad.
-      </p>
-      <p>
-        A largo plazo, nos gustaría que este proyecto pase de ser una tarea del
-        curso a un ejemplo de cómo desde la formación técnica se pueden construir
-        experiencias de aprendizaje más cercanas, claras y respetuosas con las
-        personas.
-      </p>
+    <!-- VISIÓN -->
+    <section id="vision" class="mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <img src="ASSETS/IMG/vision-recursosplus.jpg"
+            alt="Ilustración de una empresa conectada digitalmente, con iconos flotando de personas, nube y tecnología"
+            class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-lg-7">
+          <h2 class="h3 mb-3">Visión</h2>
+          <p>
+            Nos imaginamos a RecursosPlus e-learning como un puente entre las personas
+            y la tecnología dentro de las empresas. Queremos que, en el futuro, los
+            equipos de RR.HH. no solo gestionen procesos, sino que también puedan
+            participar en conversaciones sobre intranets, sitios web, cultura digital
+            y cambios legales con mayor seguridad.
+          </p>
+          <p>
+            A largo plazo, nos gustaría que este proyecto pase de ser una tarea del
+            curso a un ejemplo de cómo desde la formación técnica se pueden construir
+            experiencias de aprendizaje más cercanas, claras y respetuosas con las
+            personas.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="cursos">
-      <h2>Nuestros cursos y planes</h2>
-      <p>
-        Diseñamos nuestros cursos pensando principalmente en equipos de
-        Recursos Humanos que necesitan entender mejor el mundo digital y
-        las nuevas exigencias legales dentro de la empresa.
-      </p>
-
-      <!-- Plan 1 -->
-      <article class="curso">
-        <h3>🚀 Plan 1: Fundamentos Esenciales para RR.HH.</h3>
-        <p>
-          Este plan se centra en que el equipo de Recursos Humanos adquiera
-          una comprensión básica de los términos y procesos de desarrollo web,
-          para mejorar la comunicación con los equipos técnicos, evaluar
-          perfiles y colaborar en la gestión de contenidos web de la empresa.
+    <!-- CURSOS / SERVICIOS -->
+    <section id="cursos" class="mb-5">
+      <div class="text-center mb-4">
+        <img src="ASSETS/IMG/cursos-recursosplus.jpg"
+          alt="Ilustración de tres tarjetas que representan cursos de RR.HH., front-end y leyes laborales"
+          class="img-fluid rounded mb-3" style="max-width: 540px;">
+        <h2 class="h3">Nuestros cursos y planes</h2>
+        <p class="text-muted">
+          Diseñamos nuestros cursos pensando principalmente en equipos de
+          Recursos Humanos que necesitan entender mejor el mundo digital y
+          las nuevas exigencias legales dentro de la empresa.
         </p>
-        <p><strong>Duración estimada:</strong> 10–15 horas (3–4 semanas).</p>
-        <p><strong>Formato:</strong> micro-learning con videos cortos, lecturas y cuestionarios de comprensión.</p>
-        <p><strong>Actividad práctica:</strong> crear un currículum vitae sencillo usando solo HTML y darle formato
-          básico con CSS.</p>
-      </article>
+      </div>
 
-      <!-- Plan 2 -->
-      <article class="curso">
-        <h3>🛠️ Plan 2: Desarrollo Front-end Básico para RR.HH.</h3>
-        <p>
-          Dirigido a personal de Recursos Humanos con interés técnico o que
-          requiera realizar pequeñas modificaciones o tareas de mantenimiento
-          en la intranet o en landing pages de la empresa.
-        </p>
-        <p><strong>Duración estimada:</strong> 30–40 horas (6–8 semanas).</p>
-        <p><strong>Formato:</strong> videos explicativos, ejercicios prácticos guiados y proyectos cortos.</p>
-        <p><strong>Actividad práctica:</strong> modificar y personalizar una plantilla de landing page existente de la
-          empresa.</p>
-      </article>
+      <div class="row g-4">
+        <!-- Plan 1 -->
+        <article class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 card-title">🚀 Plan 1: Fundamentos Esenciales para RR.HH.</h3>
+              <p class="card-text">
+                Este plan se centra en que el equipo de Recursos Humanos adquiera
+                una comprensión básica de los términos y procesos de desarrollo web,
+                para mejorar la comunicación con los equipos técnicos, evaluar
+                perfiles y colaborar en la gestión de contenidos web de la empresa.
+              </p>
+              <p class="card-text"><strong>Duración estimada:</strong> 10–15 horas (3–4 semanas).</p>
+              <p class="card-text"><strong>Formato:</strong> micro-learning con videos cortos, lecturas y cuestionarios
+                de comprensión.</p>
+              <p class="card-text"><strong>Actividad práctica:</strong> crear un currículum vitae sencillo usando solo
+                HTML y darle formato
+                básico con CSS.</p>
+            </div>
+          </div>
+        </article>
 
-      <!-- Plan básico e-learning: leyes -->
-      <article class="curso">
-        <h3>⚖️ Plan Básico de E-learning: Cumplimiento y Cultura Laboral</h3>
-        <p>
-          Este plan se divide en dos módulos principales, que abordan leyes
-          laborales fundamentales en un formato accesible para toda la
-          organización, no solo para el área legal.
-        </p>
+        <!-- Plan 2 -->
+        <article class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h5 card-title">🛠️ Plan 2: Desarrollo Front-end Básico para RR.HH.</h3>
+              <p class="card-text">
+                Dirigido a personal de Recursos Humanos con interés técnico o que
+                requiera realizar pequeñas modificaciones o tareas de mantenimiento
+                en la intranet o en landing pages de la empresa.
+              </p>
+              <p class="card-text"><strong>Duración estimada:</strong> 30–40 horas (6–8 semanas).</p>
+              <p class="card-text"><strong>Formato:</strong> videos explicativos, ejercicios prácticos guiados y
+                proyectos cortos.</p>
+              <p class="card-text"><strong>Actividad práctica:</strong> modificar y personalizar una plantilla de
+                landing page existente de la
+                empresa.</p>
+            </div>
+          </div>
+        </article>
 
-        <h4>Módulo 1: Ley Karin y convivencia laboral (Ley N° 21.643)</h4>
-        <p>
-          Busca asegurar que todas las personas que trabajan en la empresa
-          conozcan y apliquen las normativas sobre acoso y violencia en el
-          trabajo, promoviendo espacios seguros y respetuosos.
-        </p>
+        <!-- Plan básico e-learning: leyes -->
+        <article class="col-12">
+          <div class="card h-100 shadow-sm mt-3">
+            <div class="card-body">
+              <h3 class="h5 card-title">⚖️ Plan Básico de E-learning: Cumplimiento y Cultura Laboral</h3>
+              <p class="card-text">
+                Este plan se divide en dos módulos principales, que abordan leyes
+                laborales fundamentales en un formato accesible para toda la
+                organización, no solo para el área legal.
+              </p>
 
-        <h4>Módulo 2: Implementación de la Jornada de 40 Horas (Ley N° 21.561)</h4>
-        <p>
-          Entrega información clara sobre los cambios legales asociados a la
-          reducción de la jornada, las etapas de implementación y el impacto en
-          los distintos tipos de jornadas laborales dentro de la organización.
-        </p>
-      </article>
+              <h4 class="h6 mt-3">Módulo 1: Ley Karin y convivencia laboral (Ley N° 21.643)</h4>
+              <p class="card-text">
+                Busca asegurar que todas las personas que trabajan en la empresa
+                conozcan y apliquen las normativas sobre acoso y violencia en el
+                trabajo, promoviendo espacios seguros y respetuosos.
+              </p>
+
+              <h4 class="h6 mt-3">Módulo 2: Implementación de la Jornada de 40 Horas (Ley N° 21.561)</h4>
+              <p class="card-text">
+                Entrega información clara sobre los cambios legales asociados a la
+                reducción de la jornada, las etapas de implementación y el impacto en
+                los distintos tipos de jornadas laborales dentro de la organización.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="testimonios">
-      <h2>Lo que opinamos como estudiantes</h2>
-      <p>
+    <!-- TESTIMONIOS / EQUIPO -->
+    <section id="testimonios" class="mb-5">
+      <h2 class="h3 mb-3 text-center">Lo que opinamos como estudiantes</h2>
+      <p class="text-center mb-4">
         Como este proyecto nació en el contexto de un curso de Frontend,
         quisimos agregar también nuestra mirada como estudiantes que
         están aprendiendo y que ven valor en este tipo de formación.
       </p>
 
-      <div class="testimonios-grid">
-        <article class="testimonio">
-          <img src="ASSETS/IMG/persona1.jpg" alt="Foto de integrante del equipo 1">
-          <p>
-            “Este proyecto me ayudó a entender cómo RR.HH. y TI pueden trabajar
-            juntos cuando hablan el mismo idioma digital.”
-          </p>
+      <div class="row g-4 testimonios-grid">
+        <article class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3">
+            <img src="ASSETS/IMG/avatar-1.jpg" alt="Avatar ilustrado de integrante del equipo RecursosPlus e-learning"
+              class="rounded-circle mx-auto mb-3" style="width: 96px; height: 96px; object-fit: cover;">
+            <p class="small mb-0">
+              “Este proyecto me ayudó a entender cómo RR.HH. y TI pueden trabajar
+              juntos cuando hablan el mismo idioma digital.”
+            </p>
+          </div>
         </article>
 
-        <article class="testimonio">
-          <img src="ASSETS/IMG/persona2.jpg" alt="Foto de integrante del equipo 2">
-          <p>
-            “Aprender a maquetar y pensar en leyes laborales al mismo tiempo
-            me hizo ver lo importante que es la comunicación clara dentro de la empresa.”
-          </p>
+        <article class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3">
+            <img src="ASSETS/IMG/avatar-2.jpg" alt="Avatar ilustrado de integrante del equipo RecursosPlus e-learning"
+              class="rounded-circle mx-auto mb-3" style="width: 96px; height: 96px; object-fit: cover;">
+            <p class="small mb-0">
+              “Aprender a maquetar y pensar en leyes laborales al mismo tiempo
+              me hizo ver lo importante que es la comunicación clara dentro de la empresa.”
+            </p>
+          </div>
         </article>
 
-        <article class="testimonio">
-          <img src="ASSETS/IMG/persona3.jpg" alt="Foto de integrante del equipo 3">
-          <p>
-            “Lo que más destaco es que los contenidos están pensados para ser
-            aplicados en el trabajo, no solo para memorizar conceptos.”
-          </p>
+        <article class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3">
+            <img src="ASSETS/IMG/avatar-3.jpg" alt="Avatar ilustrado de integrante del equipo RecursosPlus e-learning"
+              class="rounded-circle mx-auto mb-3" style="width: 96px; height: 96px; object-fit: cover;">
+            <p class="small mb-0">
+              “Lo que más destaco es que los contenidos están pensados para ser
+              aplicados en el trabajo, no solo para memorizar conceptos.”
+            </p>
+          </div>
         </article>
 
-        <article class="testimonio">
-          <img src="ASSETS/IMG/persona4.jpg" alt="Foto de integrante del equipo 4">
-          <p>
-            “Participar en este proyecto colaborativo me ayudó a perderle el miedo
-            al código y a GitHub. Recomiendo este enfoque para cualquier equipo de RR.HH.”
-          </p>
+        <article class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm p-3">
+            <img src="ASSETS/IMG/avatar-4.jpg" alt="Avatar ilustrado de integrante del equipo RecursosPlus e-learning"
+              class="rounded-circle mx-auto mb-3" style="width: 96px; height: 96px; object-fit: cover;">
+            <p class="small mb-0">
+              “Participar en este proyecto colaborativo me ayudó a perderle el miedo
+              al código y a GitHub. Recomiendo este enfoque para cualquier equipo de RR.HH.”
+            </p>
+          </div>
         </article>
       </div>
     </section>
+
+    <!-- FORMULARIO DE CONTACTO / INTERÉS -->
+    <section id="contacto" class="mb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="h3 mb-3 text-center">Conversemos sobre RecursosPlus e-learning</h2>
+          <p class="text-center mb-4">
+            Si te interesa este tipo de formación para tu equipo, completa el siguiente formulario.
+            Como este es un proyecto de estudio, la respuesta será simulada, pero el flujo es real.
+          </p>
+
+          <!-- 
+            Formulario pensado para:
+            - practicar selectores y eventos en JS
+            - mostrar validaciones simples
+            - dar feedback al usuario sin recargar la página
+          -->
+          <form id="form-contacto" class="card p-4 shadow-sm">
+            <!-- Nombre -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+              <div class="form-text">Cuéntanos quién eres para poder referirnos a ti.</div>
+            </div>
+
+            <!-- Correo -->
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" name="correo" required>
+              <div class="form-text">Usaremos este correo solo para responder a tu consulta (simulada).</div>
+            </div>
+
+            <!-- Área -->
+            <div class="mb-3">
+              <label for="area" class="form-label">Área en la que trabajas</label>
+              <select id="area" name="area" class="form-select" required>
+                <option value="">Selecciona una opción</option>
+                <option value="RRHH">Recursos Humanos</option>
+                <option value="TI">Tecnologías de la Información</option>
+                <option value="Legal">Legal / Compliance</option>
+                <option value="Otra">Otra</option>
+              </select>
+            </div>
+
+            <!-- Curso de interés -->
+            <div class="mb-3">
+              <label for="curso" class="form-label">Curso de interés</label>
+              <select id="curso" name="curso" class="form-select" required>
+                <option value="">Selecciona un curso</option>
+                <option value="fundamentos-rrhh">
+                  Plan 1 – Fundamentos esenciales para RR.HH.
+                </option>
+                <option value="frontend-rrhh">
+                  Plan 2 – Desarrollo Front-end básico para RR.HH.
+                </option>
+                <option value="leyes-laborales">
+                  Plan básico e-learning – Ley Karin y 40 horas
+                </option>
+              </select>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="form-control" rows="3"
+                placeholder="Cuéntanos brevemente qué necesitas o qué te interesó del proyecto."></textarea>
+            </div>
+
+            <!-- Consentimiento -->
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="1" id="acepto" required>
+              <label class="form-check-label" for="acepto">
+                He leído esta página y entiendo que se trata de un proyecto de estudio.
+              </label>
+            </div>
+
+            <!-- Mensaje de feedback (éxito / error) -->
+            <div id="form-feedback" class="mb-3 small"></div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-primary w-100">
+              Enviar comentario
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ASIDE -->
-  <aside>
-    <h2>Cómo trabajamos</h2>
-    <p>
-      Este proyecto se desarrolla en equipo usando GitHub. Cada integrante puede
-      colaborar creando ramas, haciendo commits pequeños y revisando los cambios
-      antes de unirlos a la rama principal.
-    </p>
+  <aside class="bg-white border-top py-4">
+    <div class="container">
+      <h2 class="h5">Cómo trabajamos</h2>
+      <p class="mb-0">
+        Este proyecto se desarrolla en equipo usando GitHub. Cada integrante puede
+        colaborar creando ramas, haciendo commits pequeños y revisando los cambios
+        antes de unirlos a la rama principal. La idea es practicar no solo código,
+        sino también flujo de trabajo colaborativo.
+      </p>
+    </div>
   </aside>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Estudio Frontend 7D · Proyecto colaborativo del curso.</p>
-    <p>Repositorio en GitHub: (aquí irá la URL cuando lo publiquemos)</p>
+  <footer class="py-4 bg-body-secondary mt-4">
+    <div class="container text-center small">
+      <p class="mb-1">© 2025 Estudio Frontend 7D · Proyecto colaborativo del curso.</p>
+      <p class="mb-0">Repositorio en GitHub: (aquí irá la URL cuando lo publiquemos)</p>
+    </div>
   </footer>
+
+  <!-- JS Bootstrap 5 (bundle con Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS propio del proyecto -->
+  <script src="ASSETS/js/main.js"></script>
 </body>
 
 </html>

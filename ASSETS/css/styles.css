@@ -1,61 +1,139 @@
+/*
+  styles.css
+  ----------
+  Hoja de estilos principal del proyecto.
+  
+  Aunque usamos Bootstrap 5 para la estructura (grillas, tarjetas, botones),
+  aquí escribimos nuestro propio CSS para:
+  1. Personalizar colores y fuentes (variables).
+  2. Ajustar detalles que Bootstrap no cubre.
+  3. Aprender cómo funciona CSS "por debajo".
+*/
+
+/* 
+  :root
+  -----
+  Aquí definimos "Variables CSS" (Custom Properties).
+  Es una buena práctica para mantener los colores consistentes en todo el sitio.
+  Si queremos cambiar el color principal, solo lo cambiamos aquí.
+*/
 :root {
-  --bg: #020617;
-  --surface: #0f172a;
-  --text: #e5e7eb;
-  --accent: #38bdf8;
+  /* Colores del tema oscuro/espacial */
+  --bg-color: #020617;
+  /* Fondo muy oscuro (casi negro) */
+  --surface-color: #0f172a;
+  /* Fondo de tarjetas/secciones */
+  --text-main: #e5e7eb;
+  /* Texto claro para fondo oscuro */
+  --text-muted: #94a3b8;
+  /* Texto secundario */
+  --accent-color: #38bdf8;
+  /* Azul brillante para destaques */
+  --brand-primary: #0d6efd;
+  /* Azul Bootstrap por defecto */
 }
 
+/* 
+  Reset básico
+  ------------
+  Bootstrap ya hace un "reboot" (reset), pero aquí aseguramos
+  que el modelo de caja sea siempre 'border-box'.
+*/
 * {
   box-sizing: border-box;
 }
 
+/* 
+  Estilos del Body
+  ----------------
+  Sobrescribimos algunos estilos de Bootstrap para darle nuestro toque.
+*/
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* 
+     Si quisieras un tema oscuro global, podrías descomentar esto:
+     background-color: var(--bg-color);
+     color: var(--text-main);
+  */
 }
 
-header,
-main,
-aside,
-footer {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
+/* 
+  Secciones
+  ---------
+  Damos un poco de aire (padding) y bordes redondeados a las secciones
+  si queremos que se distingan del fondo.
+*/
+section {
+  /* position: relative; para poder posicionar elementos hijos si fuera necesario */
+  position: relative;
 }
 
-header,
-footer,
-section,
-aside {
-  background-color: var(--surface);
-  border-radius: 0.75rem;
-  margin-top: 1rem;
+/* 
+  Imágenes
+  --------
+  Aseguramos que las imágenes sean responsivas y tengan bordes suaves.
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Bordes redondeados */
 }
 
-h1, h2, h3 {
-  margin-top: 0;
+/* 
+  Personalización de Tarjetas (Cards)
+  -----------------------------------
+  Extendemos la clase .card de Bootstrap.
+*/
+.card {
+  border: none;
+  /* Quitamos el borde por defecto */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-nav {
-  margin-top: 0.75rem;
+/* Efecto Hover: cuando pasas el mouse por encima */
+.card:hover {
+  transform: translateY(-5px);
+  /* Se mueve un poco hacia arriba */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Sombra más pronunciada */
 }
 
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  margin-right: 0.75rem;
-  font-size: 0.95rem;
+/* 
+  Navegación
+  ----------
+  Pequeños ajustes a los enlaces del nav.
+*/
+.nav-link {
+  color: var(--brand-primary);
+  font-weight: 500;
 }
 
-nav a:hover {
+.nav-link:hover {
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
-ul {
-  padding-left: 1.25rem;
+/* 
+  Testimonios
+  -----------
+  Estilos específicos para la sección de testimonios.
+*/
+.testimonios-grid .card {
+  background-color: #f8f9fa;
+  /* Fondo gris muy suave */
 }
 
+.testimonios-grid img {
+  border: 3px solid #fff;
+  /* Borde blanco alrededor del avatar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* 
+  Footer
+  ------
+*/
+footer {
+  border-top: 1px solid #dee2e6;
+}
